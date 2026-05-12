@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Coolstuff </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="cool.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fascinate+Inline&family=Nata+Sans:wght@100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Fascinate+Inline&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Nata+Sans:wght@100..900&display=swap" rel="stylesheet">
+    </head>
+    
+    <body>  
+        <header>
+            <div id="p-header">
+                <!-- drop down menu setup -->
+                <div class="dropdown">
+                <button onClick="myFunction()" class="dropbtn">
+                    <i class="fa-solid fa-bars"></i>
+                </button><br><br><br>
+                    <div class="menu-content" id="menuBox">
+                        <ul>
+                            <li><a href="">Home</a></li>
+                            <li><a href="">Trending</a></li>
+                            <li><a href="">Genre</a></li>
+                            <li><a href="">Settings</a></li>
+                            <li><a href="">Help</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Title, Searchbar, Shopping Cart, Profile -->
+                <h1>Manga/Manhwa Store</h1>
+                <input
+                    Type="text"
+                    id="Search-Bar"
+                    placeholder="Search..."
+                />
+                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-solid fa-user"></i>
+            </div>
+        </header>
+        <!-- JS for the dropdown menu function -->
+        <script>
+            function myFunction() {
+                document.getElementById("menuBox").classList.toggle("show");
+            }
+            window.onclick = function(event) {
+                var dropdown = document.getElementsByClassName("menu-content");
+                var i;
+                for (i = 0; i < dropdown.length; i++) {
+                    var openDropdown = dropdown[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show')
+                    }
+                }
+            }
+        </script>
+
+        <div class="star" style="left: 40%; animation-duration: 7s;"></div>
+        <div class="star" style="left: 70%; animation-duration: 4s;"></div>
+        <div class="star" style="left: 95%; animation-duration: 10s;"></div>
+        <div class="star" style="right: 20%; animation-duration: 15s;"></div>
+        <div class="star" style="right: 50%; animation-duration: 13s;"></div>
+        <div class="star" style="right: 75%; animation-duration: 6;"></div>
+        <div class="dancing-girl">
+        <img src="https://th.bing.com/th/id/R.f21201fb173ac8bb89d539870ba75c4a?rik=2PeKy0oqD2YEQw&riu=http%3a%2f%2f3.bp.blogspot.com%2f-fW7jTdIqi0w%2fVGGA0i_2YdI%2fAAAAAAAAD1s%2f0QiX4mxZ3C8%2fs1600%2fChibi%252BHatsune%252BMiku%252Bgif%252BGambar%252Bgerak%252BCool.gif&ehk=PDS3YAUpM3DfyohjP%2bM9CGzDdx3CJ2voMLXpOaNj6L0%3d&risl=&pid=ImgRaw&r=0" alt="dancing anime girl" />
+         <span class="close" onclick="this.parentElement.style.display='none';">X</span>
+        </div> 
+
+        <main id="main">
+            <div id="display"> 
+            <div class="shopping-item rag">
+                <a href="" target="_blank">
+                    <img 
+                        src="https://cdn2.penguin.com.au/covers/original/9781632369970.jpg"
+                        alt="a picture of the first Volume of Rent-a-Girlfriend"
+                    />
+                    <p> Rent-a-Girlfriend: Volume 1 <span class="hardcover">(Hardcover)</span></p>
+                    <p class="price"><s>$12.99</s> <span class="sale">-80%</span> $2.69</p>
+                    <button class="order-cart">Add To Cart</button>
+                </a>
+            </div>
+                <!--space-->
+                <div class="shopping-item op">
+                    <a href="" target="_blank">
+                        <img 
+                            src="one pie.jpg"
+                            alt="a picture of the first Volume of One Piece"
+                        />
+                        <p> One Piece: Volume 1 <span class="papercover">(Paperback)</span></p>
+                        <p class="price"><s>$6.99</s> <span class="sale">-80%</span> $1.49</p>
+                        <button class="order-cart">Add To Cart</button>
+                    </a>
+                </div>
+                    <!--space-->
+                <div class="shopping-item berserk">
+                    <a href="" target="_blank">
+                        <img 
+                            src="il_fullxfull.7016017487_phb4.avif"
+                            alt="a picture of the first Hardcover volume of berserk"
+                        />
+                        <p>Berserk Deluxe Edition <span class="hardcover">(Hardcover)</span></p>
+                        <p class="price"><s>$49.99</s> <span class="sale">-80%</span> $9.99</p>
+                        <button class="order-cart">Add To Cart</button>
+                    </a>
+                </div>
+                    <!--space-->
+                <div class="shopping-item sis">
+                    <a href="" target="_blank">
+                        <img
+                            src="https://tse1.explicit.bing.net/th/id/OIP.81Kozs9x1RJXc-so26DhhQHaKi?rs=1&pid=ImgDetMain&o=7&rm=3"
+                            alt="a picture of volume 1 of She was actually my stepsister"
+                        />
+                        <p>She Was Actually My Stepsister <span class="papercover">(Paperback)</span></p>
+                        <p class="price"><s>$9.52</s> <span class="sale">-80%</span> $2.11</p>
+                        <button class="order-cart">Add To Cart</button>
+                    </a>
+                </div>
+                    <!--space-->
+                <div class="shopping-item rooster">
+                    <a href="" target="_blank">
+                        <img 
+                            src="Rooster_Fighter_vol.1.png"
+                            alt="a picture of Volume 1 of Rooster Fight"
+                        />
+                        <p>Rooster Fight: Volume 1 <span class="papercover">(Paperback)</span></p>
+                        <p class="price"><s>$12.99</s> <span class="sale">-80%</span> $2.69</p>
+                        <button class="order-cart">Add to Cart</button>
+                    </a>
+                </div>
+                    <!--space-->
+                <div class="shopping-item solo">
+                    <a href="" target="_blank">
+                        <img
+                            src="https://th.bing.com/th/id/R.54f12d1565bbe04cb87f1b51a509908d?rik=6%2bfGkUoq2ZNnng&pid=ImgRaw&r=0"
+                            alt="A picture of Volume 1 of Solo Leveling"
+                        />
+                        <p>Solo Leveling: Volume 1 <span class="papercover">(Paperback)</span></p>
+                        <p class="price"><s>$15.52</s> <span class="sale">-80%</span> $3.11</p>
+                        <button class="order-cart">Add to Cart</button>
+                    </a>
+                </div>
+                <!--space-->
+            </div>
+        </main>
+       <div class="pagination">
+         <a href="#">&laquo;</a> <!-- Previous -->
+        <a href="#" class="active">1</a>
+         <a href="cool2.html">2</a>
+         <a href="#">3</a>
+        <a href="#">4</a>
+         <a href="#">5</a>
+        <a href="#">&raquo;</a> <!-- Next -->
+       <script> const pages = document.querySelectorAll('.pagination a');
+
+            pages.forEach(page => {
+            page.addEventListener('click', function() {
+            pages.forEach(p => p.classList.remove('active'));
+            this.classList.add('active');
+            });
+            });
+        </script>
+       </div>
+    </body>
+</html>
