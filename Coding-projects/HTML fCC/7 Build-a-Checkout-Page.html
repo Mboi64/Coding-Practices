@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout Page</title>
+</head>
+<body>
+    <h1>Checkout</h1>
+    <section>
+        <h2>Your Cart</h2>
+        <img src="https://cdn.freecodecamp.org/curriculum/labs/cube.jpg" alt="A photo of a mixed rubic-cube within a white background" />
+        <p>Strange Cube</p>
+        <p><b>$99.00</b></p>
+    </section>
+    <section>
+        <h2>Payment Information</h2>
+            <form id="payment-info">
+                <label for="card-name">Cardholder Name</label>
+                <input id="card-name" name="card-name" type="text" aria-required="true" required /><br>
+                <label for="exiration">Expiry Date</label>
+                <input id="exiration" name="exiration" type="type" placeholder="MM/YY" aria-required="true" required /><br>
+                <label for="card-number">Card Number</label>
+                <input id="card-number" name="card-number" type="type" aria-required="true" required /><br>
+                <label for="pin">CVV</label>
+                <input id="pin" name="pin" type="number" min="000" max="999" aria-required="true" placeholder="000" required /><br>
+                <button type="submit">Place order</button>
+            </form>
+    </section>
+</body>
+
+</html>
