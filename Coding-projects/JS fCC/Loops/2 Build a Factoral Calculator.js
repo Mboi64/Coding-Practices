@@ -63,21 +63,20 @@ const resultMsg = `Factorial of ${num} is ${factorial}`;
 
 console.log(resultMsg);
 
-
-// revist: wtf was i doing before 
+// revist: wtf was i doing before
 
 const num = 7;
 
 const factorialCalculators = (num) => {
-let result = 1;
-for (let i = result; i <= num; i++){
-  result *= i
-}
-return result
-}
+  let result = 1;
+  for (let i = result; i <= num; i++) {
+    result *= i;
+  }
+  return result;
+};
 
-const factorial = factorialCalculator(num)
+const factorial = factorialCalculator(num);
 
-const resultMsg = `Factorial of ${num} is ${factorial}`
+const resultMsg = `Factorial of ${num} is ${factorial}`;
 
-console.log(resultMsg)
+console.log(resultMsg);

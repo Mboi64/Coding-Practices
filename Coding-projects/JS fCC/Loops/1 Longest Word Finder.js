@@ -42,18 +42,18 @@ console.log(
   ),
 );
 
-
-
 // revisted: had to look back for a hint and saw split as a method and immediately waas able to solve it
 const findLongestWordLengths = (str) => {
-let space = str.split(" ")
-let result = "";
-for (let i = 0; i < space.length; i++) {
-  if (space[i].length > result.length) {
-    result = space[i]
+  let space = str.split(" ");
+  let result = "";
+  for (let i = 0; i < space.length; i++) {
+    if (space[i].length > result.length) {
+      result = space[i];
+    }
   }
-}
-return result.length
-}
+  return result.length;
+};
 
-console.log(findLongestWordLength("The quick brown fox jumped over the lazy dog"))
+console.log(
+  findLongestWordLength("The quick brown fox jumped over the lazy dog"),
+);

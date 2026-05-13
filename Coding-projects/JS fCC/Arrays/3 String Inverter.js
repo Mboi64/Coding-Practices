@@ -1,6 +1,6 @@
 let str = [];
 
-function reverseString(str){
+function reverseString(str) {
   let change = str.split("");
   let develop = change.reverse();
   let upload = develop.join("");

@@ -3,19 +3,23 @@ let count = 0;
 function cc(card) {
   if (card >= 1 && card <= 6) {
     return ++count + " Bet";
-  }
+  } else if (card <= 10) {
   /*else if (card >= 7 && card <= 9) {
     return count + " Hold";
   }
   */
- else if (card <= 10) {
-  return --count + " Bet";
- }
-  else if (card === 10 || card === "J" || card === "Q" || card === "K" || card === "A") {
+    return --count + " Bet";
+  } else if (
+    card === 10 ||
+    card === "J" ||
+    card === "Q" ||
+    card === "K" ||
+    card === "A"
+  ) {
     return --count + " Hold";
   }
 
- return count + (count > 0 ? " Bet" : " Hold");
+  return count + (count > 0 ? " Bet" : " Hold");
 }
 
 /*
@@ -56,11 +60,9 @@ console.log(cc(2));
 console.log(cc(7));
 */
 
-
 console.log(cc(2));
 console.log(cc(2));
 console.log(cc(10));
-
 
 /*
 console.log(cc(3));
@@ -70,8 +72,7 @@ console.log(cc(10));
 console.log(cc("K"));
 */
 
-
-// This was my original code before I asked for help 
+// This was my original code before I asked for help
 
 /* 
 function cc(card) {

@@ -7,23 +7,19 @@ const fortune5 = "It would be wise to avoid the color red today.";
 const min = 1;
 const max = 5;
 
-let randomNumber = Math.floor (Math.random() * (max)) + min;
+let randomNumber = Math.floor(Math.random() * max) + min;
 
 let selectedFortune;
 
-if (randomNumber == 1){
+if (randomNumber == 1) {
   selectedFortune = fortune1;
-}
-else if (randomNumber == 2){
+} else if (randomNumber == 2) {
   selectedFortune = fortune2;
-}
-else if (randomNumber == 3){
+} else if (randomNumber == 3) {
   selectedFortune = fortune3;
-}
-else if (randomNumber == 4){
+} else if (randomNumber == 4) {
   selectedFortune = fortune4;
-}
-else if (randomNumber == 5){
+} else if (randomNumber == 5) {
   selectedFortune = fortune5;
 }
 

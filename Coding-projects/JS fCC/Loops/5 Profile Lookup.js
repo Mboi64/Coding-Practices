@@ -50,14 +50,14 @@ console.log(lookUpProfile("bob", "address"));
 
 // revisted: it took less time than how I did it before, and its less complicated looking
 const lookUpProfile = (name, prop) => {
-  for (let i = 0; i < contacts.length; i++){
-  if (contacts[i].firstName === name){
-    if ((prop in contacts[i])){
-      return contacts[i][prop]
-    } else {
-      return "No such property"
+  for (let i = 0; i < contacts.length; i++) {
+    if (contacts[i].firstName === name) {
+      if (prop in contacts[i]) {
+        return contacts[i][prop];
+      } else {
+        return "No such property";
+      }
     }
   }
-  }
-  return "No such contact"
-}
+  return "No such contact";
+};

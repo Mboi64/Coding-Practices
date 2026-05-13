@@ -45,13 +45,13 @@ console.log(mutation(["floor", "for"]));
 // (i had to refer back to old code, to realize .includes() is REALLY useful for finding strings INCLUDED in the string)
 
 const mutation = (arr) => {
-const first = arr[0].toLowerCase()
-const second = arr[1].toLowerCase()
-for (const char of second){
-  if (!first.includes(char)){
-    return false
+  const first = arr[0].toLowerCase();
+  const second = arr[1].toLowerCase();
+  for (const char of second) {
+    if (!first.includes(char)) {
+      return false;
+    }
   }
-}
 
-return true
-}
+  return true;
+};

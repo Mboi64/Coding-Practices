@@ -54,45 +54,51 @@ const questions = [
     category: "Movies",
     question: "Which movie won an oscar for best animated film?",
     choice: ["A. The Boss Baby", "B. Puss in Boots: The Last Wish", "C. Rango"],
-    answer: "C. Rango"
-  }, {
+    answer: "C. Rango",
+  },
+  {
     category: "Anime Ball",
-    question: "Which anime has the MOST reference (from this selection) throughout media?",
+    question:
+      "Which anime has the MOST reference (from this selection) throughout media?",
     choice: ["A. Akira Slide", "B. Naruto Run", "C. Kamehameha Wave"],
-    answer: "A. Akira Slide"
-  }, {
+    answer: "A. Akira Slide",
+  },
+  {
     category: "Social Media",
     question: "What was the most subbed YouTube channel in 2020?",
     choice: ["A. Pewdiepie", "B. T-Series", "C. Dude Perfect"],
-    answer: "B. T-Series"
-  }, {
+    answer: "B. T-Series",
+  },
+  {
     category: "People",
-    question: "This person hides food every where while filming, they even have themself eating a snack on a very popular film!",
+    question:
+      "This person hides food every where while filming, they even have themself eating a snack on a very popular film!",
     choice: ["A. Robert Downey Jr.", "B. Tom Hanks", "C. Tim Allen"],
-    answer: "A. Robert Downey Jr."
-  }, {
+    answer: "A. Robert Downey Jr.",
+  },
+  {
     category: "Refrences",
-    question: "Quote: \"Think of a Big Black Man chasing you\"",
+    question: 'Quote: "Think of a Big Black Man chasing you"',
     choice: ["A. SAO Abridge", "B. Golden Boy", "C. Ghost Stories"],
-    answer: "C. Ghost Stories"
-  }
+    answer: "C. Ghost Stories",
+  },
 ];
-let random = Math.floor(Math.random() * (5));
+let random = Math.floor(Math.random() * 5);
 
 // Random Question
 const getRandomQuestion = (questions) => {
   return questions[random].question;
-}
+};
 
-console.log(getRandomQuestion())
+console.log(getRandomQuestion());
 
 // Random Computer Choice
 const getRandomComputerChoice = (questions) => {
-  let randomChoice = Math.floor(Math.random() * (3));
+  let randomChoice = Math.floor(Math.random() * 3);
   return questions[random].choice[randomChoice];
-}
+};
 
-console.log(getRandomComputerChoice())
+console.log(getRandomComputerChoice());
 
 let randomQuestion = getRandomQuestion();
 let randomAnswer = getRandomComputerChoice();
@@ -101,11 +107,11 @@ let randomAnswer = getRandomComputerChoice();
 const getResults = (randomQuestion, randomAnswer) => {
   let result = "";
   if (randomAnswer == questions?.answer) {
-    result = "The computer's choice is correct!"
+    result = "The computer's choice is correct!";
   } else {
-    result = `The computer's choice is wrong. The correct answer is: ${questions[random].answer}`
+    result = `The computer's choice is wrong. The correct answer is: ${questions[random].answer}`;
   }
   return result;
-}
+};
 
-console.log(getResults())
+console.log(getResults());

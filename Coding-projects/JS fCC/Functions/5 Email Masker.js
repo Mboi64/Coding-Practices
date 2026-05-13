@@ -1,10 +1,13 @@
 function maskEmail(email) {
-    const starBegin = email.indexOf(email[1]);
-    const starEnd = email.indexOf("@") - 1;
-    const hidden = email.slice(starBegin, starEnd);
-    const change = email.replace(hidden , "*".repeat((starBegin - 1) + (starEnd - 1)));
-    return change;
-  }
+  const starBegin = email.indexOf(email[1]);
+  const starEnd = email.indexOf("@") - 1;
+  const hidden = email.slice(starBegin, starEnd);
+  const change = email.replace(
+    hidden,
+    "*".repeat(starBegin - 1 + (starEnd - 1)),
+  );
+  return change;
+}
 
 let email = "coochieman@email.com";
 
