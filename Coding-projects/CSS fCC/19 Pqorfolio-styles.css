@@ -1,0 +1,242 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --main-red: rgb(197, 45, 45);
+    --text: white;
+    --main-blue: #45567d;
+    --main-gray: #303841;
+}
+
+html {
+    font-size: 62.6%;
+}
+
+/* horizontal nav bar creation with ul li*/
+ul {
+    position: fixed;
+    list-style: none;
+    overflow: hidden;
+    background-color: var(--main-red);
+    display: flex;
+    justify-content: flex-end;
+    top: 0;
+    width: 100%;
+    box-shadow: rgb(36, 35, 35) 1px 3px 2px;
+    z-index: 3;
+}
+
+ul > li > a {
+    display: block; 
+    color: var(--text);
+    text-decoration: none;
+    padding: 14px 16px;
+    font-size: 2rem;
+}
+
+ul > li > a:hover {
+    background-color: var(--main-blue);
+    transition: .5s;
+}
+
+/* Title page;hero design */
+#welcome-section{
+    text-align: center;
+    padding: 20rem;
+    background: #4f4f4f;
+    background: linear-gradient(90deg,rgba(79, 79, 79, 1) 4%, rgba(48, 48, 48, 1) 72%);
+} 
+
+#welcome-section > h1 {
+    color: var(--text);
+    font-size: 4.5rem;
+}
+
+#welcome-section > p {
+    font-size: 2.5rem;
+    font-style: italic;
+    padding-top: 20px;
+    font-weight: lighter;
+    color: var(--main-red);
+}
+
+#project-section {
+    background-color: var(--main-blue);
+    padding: 9rem 0 20rem 0;
+}
+
+.header {
+    text-align: center;
+    color: var(--text);
+    font-size: 5rem;
+    border-bottom: var(--text) solid 1px;
+    padding: 1rem;
+    margin: 0 13rem 50px;
+}
+
+/* find a way to have the photos shaped evenly in a grid structure */
+.project-tile {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    column-gap: 4.5rem;
+    row-gap: 4.5rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+/* if I were to delete .image the grid would look messed up since each picture has a differnt aspect ratio */
+
+/* this creates the gray background for each title */
+/* the max width and height helped in decarding unnesscary expansions to the background color of the picture and text */
+.project-info {
+    background: var(--main-gray);
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+    max-height: 350px;
+}
+
+.project-info a {
+    text-decoration: none;
+}
+
+.image {
+    width: 100%;
+    max-width: 400px;
+    height: 85%;
+    background: var(--main-gray);
+    object-fit: cover; /* this element resizes the img to fit within its given container (the given grid setup) */
+}
+
+.project-title {
+    background: var(--main-gray);
+    justify-content: center;
+    text-align: center;
+    color: var(--text);
+    font-size: 2rem;
+    padding: 2rem 0.5rem;
+}
+
+.code {
+    color: var(--main-gray);
+    transition: color 0.3s ease-out;
+}
+
+.project-info:hover .code {
+    color: #ff7f50;
+    font-weight: bold;
+}
+
+/* We clutched the grid design chat */
+
+/* button function and design */
+button {
+    position: absolute;
+    margin-top: 4%;
+    left: 47%;
+    padding: 1rem 2rem;
+    border-radius: 2px;
+    font-size: 2.3rem;
+    color: var(--text);
+    background: var(--main-gray);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    z-index: 1;
+    transition: translate 0.3s ease-out;
+}
+
+button:hover {
+    background: var(--main-red);
+    transition: 0.3s;
+}
+
+#arrow {
+    display: inline-block;
+    margin-left: 6px;
+    transition: transform 0.3s ease-out;
+  }
+
+button:hover #arrow {
+    transform: translateX(5px);
+  }
+
+/* footer design and function */
+
+#profile-link, footer {
+    background: var(--main-gray);
+    color: var(--text);
+    text-align: center;
+    padding: 20px;
+}
+
+#profile-link > h1 {
+    font-size: 6rem;
+    padding: 9rem 0 2rem 0;
+}
+
+#profile-link > p {
+    font-style: italic;
+    font-size: 2rem;
+    padding-bottom: 6rem;
+    font-weight: light;
+}
+
+#contact-link > a {
+    display: inline-block;
+    font-size: 3rem;
+    text-decoration: none;
+    padding: 1rem 3rem;
+    color: var(--text);
+    animation: slide-out .5s;
+    animation-fill-mode: both;
+}
+
+#contact-link > a:hover {
+    text-shadow: 2px 2px 1px #1f1f1f;
+    animation: slide-in .5s;
+    animation-fill-mode: both;
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes slide-out {
+    0% {
+        transform: translateY(-8px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+address {
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 1.5rem;
+    font-size: 1.5rem;
+    border-top: var(--main-red) solid;
+}
+
+address > p {
+    padding: 2rem;
+    font-size: 2rem;
+}
+
+/* Adding Media Query*/
+
+@media screen and (max-width: 768px) {
+    .project-grid {
+        display: grid;
+        align-items: center;
+    }
+}

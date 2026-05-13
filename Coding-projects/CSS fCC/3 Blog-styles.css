@@ -1,0 +1,53 @@
+body {
+    background-color: gainsboro;
+}
+
+.blog-post-card {
+    background-color: white;
+    border-radius: 15px;
+    width: 390px;
+    height: auto;
+    text-align: center;
+    box-shadow:1px 2px 9px lightslategray;
+    margin: 10% auto;
+}
+
+.post-img {
+    width: 390px;
+    height: auto;
+    border-bottom: solid black 5px;
+    /* topleft, topright, bottomright, bottomleft*/
+    border-radius: 10px 10px 0 0;
+}
+
+.blog-post-content{
+    padding-bottom: 20px;
+    padding-top: 5px;
+}
+
+.post-title{
+    color:#505050;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.post-excerpt{
+    color: grey;
+    font-family: 'Times New Roman', Times, serif;
+    padding-top:0px;
+}
+
+.read-more {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    background-color:#404040;
+    color: whitesmoke;
+    margin:auto;
+    padding:10px 15px;
+    border-radius: 5px;
+}
+
+.read-more:hover {
+    background-color: grey;
+    transition:0.5s;
+}

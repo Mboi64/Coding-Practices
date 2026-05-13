@@ -1,0 +1,68 @@
+:root {
+    --color0: #eeeeee;
+    --color1: #d6d5d5;
+    --color2: #8b6969;
+    --color3: #8f4646;
+    --color4: #702525;
+    --color5: #660303;
+    --solid-border: solid 2px black;
+    --dashed-border: dashed 2px black;
+}
+
+table {
+    margin: 0;
+    position: absolute;
+}
+
+
+.available-0 {
+    background: var(--color0);
+}
+
+.available-1 {
+    background: var(--color1);
+}
+
+.available-2 {
+    background: var(--color2);
+}
+
+.available-3 {
+    background: var(--color3);
+}
+
+.available-4 {
+    background: var(--color4);
+}
+
+.available-5 {
+    background: var(--color5);
+}
+
+tr[class="sharp"] > td {
+    border-bottom: var(--solid-border);
+}
+
+tr[class="half"] > td {
+    border-bottom: var(--dashed-border);
+}
+
+#legend-gradient {
+    width: 15vw;
+    height: 25px;
+    border: 1px solid black;
+    background: linear-gradient(
+        90deg,
+        var(--color0) 0% 20%,
+        var(--color1) 20% 40%,
+        var(--color2) 40% 60%,
+        var(--color3) 60% 80%,
+        var(--color4) 80% 100%,
+        var(--color5) 100% 120%
+    );
+}
+
+#legend {
+    position: absolute;
+    top: 25%;
+}

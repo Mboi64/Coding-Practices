@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="17 langing-page-styless.css" />
+    <!--- Below is a link allowing fontawesome to connect to my html program -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--- Below is a link allowing googlefont to connect to my css/html program -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nata+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <title>Product Landing Page</title>
+</head>
+<body>
+    <header id="header">
+        <img 
+        id="header-img" 
+        src="https://cdn.freecodecamp.org/testable-projects-fcc/images/product-landing-page-logo.png" 
+        alt="original trombones logo"
+        />
+        <nav id="nav-bar">
+            <a href="#features" class="nav-link">Features</a>
+            <a href="#hiw" class="nav-link">How It Works</a>
+            <a href="#pricing" class="nav-link">Pricing</a>
+        </nav>
+    </header>
+    <main>
+        <section id="sign-up">
+            <h1>Handcraft, Homemade Masterpieces</h1>
+            <form action="https://www.freecodecamp.org/email-submit" method="POST" id="form">
+                <input id="email" type="email" name="email" placeholder="Enter your email address" required /> <br>
+                <input type="submit" id="submit" value="Get Started" />
+            </form>
+        </section>
+        <section id="features">
+            <div class="icon">
+                <!-- This is a copied icon from fontawesome -->
+                <i class="fa-solid fa-fire"></i>
+            </div>
+            <div class="information">
+                <h2>Premium Materials</h2>
+                <p>Our trombones use the shiniest brass which is sourced locally. This will increase the longevity of your purchase.</p>
+            </div>
+            <div class="icon">
+                <i class="fa-solid fa-truck"></i>
+            </div>
+            <div class="information">
+                <h2>Fast Shipping</h2>
+                <p>We make sure you receive your trombone as soon as we have finished making it. We also provide free returns if you are not satisfied.</p>
+            </div>
+            <div class="icon">
+                <i class="fa-solid fa-battery-full"></i>
+            </div>
+            <div class="information">
+                <h2>Quality Assurance</h2>
+                <p>For every purchase you make, we will ensure there are no damages or faults and we will check and test the pitch of your instrument.</p>
+            </div>
+        </section>
+        <section id="hiw">
+            <video
+            src="The-United-States-Army-Field-Band.mp4"
+            type="video/mp4"
+            controls
+            id="video"
+            ></video>
+        </section>
+        <section id="pricing">
+            <div class="box">
+                <h3 class="trombone">Tenor Trombone</h3>
+                <p class="pricy">$600</p>
+                <ul>
+                    <li>Good for Beginners</li>
+                    <li>Excellent Sound Quality</li>
+                    <li>Great for Jazz Bands</li>
+                    <li>Nice and Shiny</li>
+                </ul>
+                <button type="button">Select</button>
+            </div>
+            <div class="box">
+                <h3 class="trombone">Bass Trombone</h3>
+                <p class="pricy">$900</p>
+                <ul>
+                    <li>Sound Quality Unmatched</li>
+                    <li>Best for Professionals</li>
+                    <li>Absolutely Stunning</li>
+                    <li>Durable and Long-Lasting</li>
+                </ul>
+                <button type="button">Select</button>
+            </div>
+            <div class="box">
+                <h3 class="trombone">Valve Trombone</h3>
+                <p class="pricy">$1200</p>
+                <ul>
+                    <li>Plays Similar to Trumpet</li>
+                    <li>Great for Jazz Bands</li>
+                    <li>Beautiful in Sound and Appearance</li>
+                    <li>Just Amazing</li>
+                </ul>
+                <button type="button">Select</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <ul>
+            <li><a href="made_you_look" target="_blank" class="footer">Privacy</a></li>
+            <li><a href="stupid" target="_blank" class="footer">Terms</a></li>
+            <li><a href="911" target="_blank" class="footer">Contact</a></li><br>
+        </ul>
+        <address>
+            Copyright 2016, Original Trombones
+        </address>
+    </footer>
+</body>
+</html>

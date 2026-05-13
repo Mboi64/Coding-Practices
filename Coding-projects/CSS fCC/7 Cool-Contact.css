@@ -1,0 +1,77 @@
+body {
+    font-family: Cambria, Cochin;
+    background: linear-gradient(90deg, #a79c9c, #8c8ce0);
+}
+
+.form-container {
+    background-color: #f7f8f8;
+    border-radius: 10px;
+    width: 350px;
+    min-width:200px;
+    margin: 20vh auto;
+    padding: 10px;
+    display: block;
+    text-align: center;
+    box-shadow: 0px 1px 4px #615555;
+}
+
+label {
+    color: #615555;
+    margin:10px 10px 20px;
+    display: block;
+    font-size: 18px;
+}
+
+h1 {
+    padding:20px 0 0 10px;
+}
+
+input,
+textarea {
+    width: 15vw;
+    min-width: 200px;
+    padding: 10px 20px;
+    margin: 10px 0 2px;
+    outline: gray;
+    border: 1px solid #c4cccc;
+    border-radius:5px;
+    resize: vertical;
+}
+
+input:user-valid,
+textarea:user-valid{
+    border: 2px solid #24a718;
+}
+
+input:focus,
+textarea:focus {
+    border: 2px solid #899da8;
+}
+
+input:user-invalid,
+textarea:user-invalid {
+    border: 2px solid #bb4040;
+}
+
+button {
+    background-color: rgb(76, 188, 216);
+    border: 2px solid rgb(77, 188, 216);
+    border-radius: 3px;
+    font-family: Cambria, Cochin;
+    font-size: 16px;
+    color:#1d1616;
+    margin-bottom: 10px;
+    padding: 3px 20px;
+}
+
+button:hover {
+    background-color:aqua;
+    border: 2px solid aqua;
+    box-shadow:0px 1px 3px #615555;
+    transition: 0.3s;
+    font-size:large;
+}
+
+button:focus {
+    border: 2px solid #899da8;
+}

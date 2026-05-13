@@ -1,0 +1,56 @@
+#playing-cards {
+    /* cross axis (y) is perpendicular from the main axis (x) */
+    /* this id mainly affects the placement of the card */
+    display: flex; /* allows for flexbox desgins */
+    gap: 40px; /* create a space between each card */
+    align-items: center; /* makes the card center along the cross axis */
+    justify-content: center; /* make the card (child) center along the main axis */
+    flex-wrap: wrap; /* makes each card setup in a row list */
+}
+
+.card {
+    /* this class mainly affects the card structure itself */
+    justify-content: space-between;
+    width: 200px;
+    height: 400px;
+    display: flex;
+    border: solid black 2px;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 25px;
+    box-shadow: 3px 2px 3px gray;
+}
+
+.left {
+    align-self: flex-start;
+}
+
+.middle {
+    display: flex;
+    align-self: center;
+    row-gap: 10px;
+    flex-direction: column; 
+}
+
+.middle-section {
+    display: flex;
+    flex-direction: center;
+    column-gap: 5px;
+}
+
+.middle-part {
+    display: flex;
+    align-self: center;
+}
+
+.middle, .middle-part, .middle-section {
+    font-size: 50px;
+}
+
+.right {
+    align-self: flex-end;
+}
+
+.flipped {
+    transform: rotate(180deg);
+}

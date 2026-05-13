@@ -1,0 +1,68 @@
+* {
+    box-sizing: content-box;
+}
+
+.read,
+.to-read,
+.in-progress {
+    background-image: linear-gradient(hsl(120, 100%, 85%, 0.6), hsl(120, 100%, 65%, 0.6));
+    text-align: center;
+}
+
+span {
+    display: inline-block;
+}
+
+tr[class="read"] span[class="Status"]  { /* the first attribute targets trow with .read, following its desendent of a span with the status class*/
+    border-radius: 20px;
+    border: 0.1em solid hsl(120, 75%, 45%);
+    background-image: linear-gradient(hsl(120, 75%, 75%), hsl(120, 75%, 50%));
+}
+
+tr[class="to-read"] { /* the first attribute targets trow with .to-read, following its desendent of a span with the status class*/
+    background-image: linear-gradient(hsl(120, 20%, 95%, 0.6), hsl(120, 20%, 75%, 0.6));
+}
+
+tr[class="to-read"] span[class="Status"] {
+    border: 0.1em solid hsl(5, 100%, 45%);
+    border-radius: 20px;
+    background-image: linear-gradient(hsl(5, 100%, 75%), hsl(5, 100%, 50%));
+}
+
+tr[class="in-progress"] {
+    background-image: linear-gradient(hsl(40, 100%, 85%, 0.60), hsl(40, 100%, 65%, 0.6));
+}
+
+tr[class="in-progress"] span[class="Status"] { /* the first attribute targets trow with .in-progress, following its desendent of a span with the status class*/
+    border: 0.1em solid hsl(40, 90%, 40%);
+    border-radius: 20px;
+    background-image: linear-gradient(hsl(40, 90%, 75%), hsl(40, 90%, 50%));
+}
+
+span[class="Status"], span[class^="Rate"] { /* targets both an attribute span with Status class, and a span with the Rate class*/
+    width: 90px;
+    height: 5px;
+    padding: 10px .12em;
+    margin: 10px;
+}
+
+span[class^="Rate"] > span {  /* targets an attribute span with a class including Rate and other possible classes, following the DIRECT child span */
+    border: 0.1em solid hsl(0, 0%, 50%);
+    border-radius: 50%;
+    background-color: hsl(0, 15%, 95%);
+    height: 15px;
+    width: 15px;
+    margin: 0.1em;
+}
+
+span[class~="one"] span:first-child { /* targets the class included in the Rate class (one) */
+    background-image: linear-gradient(hsl(50, 100%, 70%), hsl(50, 100%, 50%));
+}
+
+span[class~="two"] span:not(span:last-child) { /* targets the class included in the Rate class (two) */
+    background-image: linear-gradient(hsl(50, 100%, 70%), hsl(50, 100%, 50%));
+}
+
+span[class~="three"] span { /* targets the class included in the Rate class (three) */
+    background-image: linear-gradient(hsl(50, 100%, 70%), hsl(50, 100%, 50%));
+}

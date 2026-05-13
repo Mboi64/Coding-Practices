@@ -1,0 +1,20 @@
+body {
+  padding:50px 0px; /*padding: 50px top and bottom; 0px left and right*/
+  margin:0px auto; /* margin: 0px top and bottom; auto-centering left and right*/
+  width:70vw; /* width relative to viewpoint width*/
+  min-height: calc(100vh - 100px); /* 100vh - (2 * 50px padding) */
+  text-align: center;
+}
+
+hr {
+    width: 100%;
+}
+
+section {
+    width:100%;
+    margin:50px 0px;
+}
+
+li {
+    list-style-position: outside;
+}

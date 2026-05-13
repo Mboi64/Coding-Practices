@@ -1,0 +1,86 @@
+body {
+   background-color: rosybrown;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+p {
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+a {
+    /* takes away underline for the links*/
+    text-decoration: none;
+    color:rosybrown;
+}
+
+a:visited {
+    color:darkgray;
+}
+
+a:hover {
+    color:rosybrown;
+}
+
+hr {
+    border-color:rosybrown;
+    background-color: rosybrown;
+    margin-bottom:15px;
+    margin-top:15px;
+}
+
+.full-name {
+    font-size: 25px;
+    color:grey;
+}
+
+.designation{
+    color:lightslategray;
+    font-size: 18px;
+}
+
+.company {
+    color:lightgray;
+    font-size:15px
+}
+
+.email, .phone {
+    font-size: 15px;
+}
+
+.business-card {
+    background-color: white;
+    padding:20px;
+    width: 300px;
+    /* margin top and bottom: 100px; margin left and right: auto;*/
+    margin: 100px auto;
+    text-align: center;
+    font-size: 16px; 
+    border: solid grey 3px;
+    border-radius: 10px;
+}
+
+.profile-image {
+    width: 180px;
+    margin: auto;
+    border: grey solid 2.5px;
+    border-radius: 10px;
+    border-left: none;
+    border-top: none;
+}
+
+.social-media {
+    background-color: white;
+    padding:auto;
+    width: 200px;
+    /* margin-top: 10px; margin-left: auto; margin-right: auto; margin-bottom: 15px;*/
+    margin: 10px auto 15px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.credited {
+    font-size: 10px;
+    font-style: italic;
+    text-align: end;
+}

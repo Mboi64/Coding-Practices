@@ -1,0 +1,61 @@
+* {
+    box-sizing: content-box;
+}
+
+html {
+    font-size: 24px;
+    background-color: lightcyan;
+}
+
+.newspaper { /* edit's white space */
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif; 
+    display: grid; /* what does this do????*/
+    width: 900px;
+    min-width: 500px;
+    height: auto;
+    padding: 50px 60px;
+    margin: 50px auto;
+    background-color: aliceblue;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px gray;
+    line-height: 25px;
+}
+
+.name {
+    font-size: 2rem; /* 2 times the root size */ 
+    font-family: 'Times New Roman', serif;
+}
+
+.author {
+    font-weight: bold; /* edit author's name thickness*/
+}
+
+.name, .author {
+    text-transform: uppercase;
+}
+
+.name, .date {
+    text-align: center;
+}
+
+.headline {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.sub-headline {
+    font-size: 1.5em;
+    font-style: italic; /* edits the design */
+    font-weight: 100;
+}
+
+.text {
+    text-indent: 20px;
+    line-height: 2em;
+}
+
+.text::first-letter {
+    font-size: 2em;
+    font-weight: bold;
+}

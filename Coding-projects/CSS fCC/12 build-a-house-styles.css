@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightskyblue;
+}
+
+#ground{
+    position: absolute;
+    background-color: green;
+    height: 100%;
+    width: 100%;
+    margin:-8;
+    z-index: -1;
+}
+
+#house {
+    position: relative;
+    width: 500px;
+    height: 400px;
+    border: 5px solid black;
+    background-color: firebrick;
+    top: 200px;
+    margin: auto;
+    border-radius: 100px 100px 0 0;
+}
+
+#chimney, 
+#roof, 
+#window-1,
+#window-2, 
+#door {
+    position: absolute;
+}
+
+#chimney {
+    border: 2px solid black;
+    width: 105px;
+    height: 150px;
+    background: repeating-linear-gradient( white, white 10%, black 10%, black 12%);
+    left: 300px;
+    top: -100px;
+    z-index: -1;
+}
+
+#roof {
+    width: 100%;
+    height: 110px;
+    border: transparent;
+    border-radius: 90px 90px 0 0;
+    background: repeating-linear-gradient(45deg, black, black 1%, transparent 1%, transparent 6%), 
+    repeating-linear-gradient(-45deg, black, black 2%, firebrick 2%, firebrick 5%) ;
+}
+
+#window-1 {
+    width: 95px;
+    height: 100px;
+    border: 5px solid black;
+    top: 40%;
+    left: 50px;
+    background: linear-gradient(to right, rgb(245, 203, 125), rgb(245, 203, 125) 48%, black 48%, black 52%, rgb(245, 203, 125) 52%, rgb(245, 203, 125) 100%);
+}
+
+#window-2 {
+    width: 95px;
+    height: 100px;
+    border: 5px solid black;
+    top: 40%;
+    left: 340px;
+    background: linear-gradient(to right, rgb(245, 203, 125), rgb(245, 203, 125) 48%, black 48%, black 52%, rgb(245, 203, 125) 52%, rgb(245, 203, 125) 100%);
+}
+
+#door {
+    width: 120px;
+    height: 150px;
+    border: 5px solid black;
+    border-bottom: transparent;
+    top: 62%;
+    left: 37%;
+    background-color: antiquewhite;
+}
+
+#doorknob {
+    width: 20px;
+    height: 20px;
+    border: 5px solid black;
+    border-radius: 50%;
+    position: absolute;
+    left: 80px;
+    top: 60px;
+    background-color: black;
+}

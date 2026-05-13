@@ -1,0 +1,75 @@
+/* describes the page's background and font */
+body{
+ background-color: lightgrey;
+ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+/* changes the structure and color of the heading */
+h1 {
+    color:rgb(112, 109, 109);
+    margin-top:-7%;
+    margin-bottom: 10%;
+    font-size: 48px;
+    text-align: center;
+}
+
+/* portays the positioning and type of displays shown for the white background */ 
+.list {
+    text-align: left;
+    display: inline-block;
+    background-color: white;
+    padding: 5%;
+    margin-top: 5%;
+    margin-left: 37%;
+    width: 300px;
+    max-width: 400px;
+    height: 350px;
+    max-height: 400px;
+    /* below shows the drop shadow*/
+    border-radius: 25px;
+    box-shadow: 1px 1px 7px;
+}
+
+/* this is the background color of the list itself*/
+li {
+    background-color: rgb(220, 250, 240);
+    display: block;
+    margin-bottom: 10%;
+    margin-left: -10%;
+    padding-left: 15%;
+    border-radius: 15px;
+}
+
+/* these are the changes to the link*/
+.todo-list{
+    list-style-type: none;
+    line-height: 30px;
+}
+
+/* discards the underline of the link and change the default color*/
+.sub-item-link {
+    text-decoration: none;
+    color:cadetblue;
+}
+
+/* when you hover over the link it changes color */ 
+.sub-item-link:hover {
+    color:chocolate;
+}
+
+/* when you click the link it changes color */ 
+.sub-item-link:active {
+    color: yellowgreen
+}
+
+/* after you visit the link it changes color */ 
+.sub-item-link:visited {
+    color: coral;
+}
+
+/* when you use a keyboard to select the link it changes color */ 
+.sub-item-link:focus {
+    color:darkgray;
+    outline: grey;
+}

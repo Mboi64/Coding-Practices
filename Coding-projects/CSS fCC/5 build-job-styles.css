@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color:aliceblue;
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    appearance: none;
+}
+
+.container {
+    background-color: white;
+    width: 740px;
+    margin:calc(50px + 4vw);
+    margin: 5% auto; 
+    text-align: center;
+    padding: 40px 30px;
+    box-shadow: 0 2px 4px gray;
+}
+
+input:user-focus, textarea:user-focus {
+    border: grey solid; /* textbox turns gray upon userinteraction*/
+    outline:none;
+}
+
+input, select, textarea { /* edits the textbox */
+    border-radius: 10px;
+    width: 100%;
+}
+
+label { /* have the text move to the left position*/
+    display: flex;
+    margin:5px auto;
+}
+
+fieldset {
+    text-align: left;
+    width: 97%;
+    margin: 10px auto;
+}
+
+input:user-invalid, select:user-invalid, textarea:user-invalid {
+  border: red 2px solid; /* when text is not completed it will turn red*/
+}
+
+input:user-valid, select:user-valid, textarea:user-valid {
+  border: green 2px solid; /* when text is completed it will turn green*/
+}
+
+.radio-group{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.radio-group input[type="radio"]{ /* some code inspired by glitchGoddess */
+    appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border:gray solid 2px;
+    transition: 0.5s;
+  }
+
+.radio-group input[type="radio"]:checked {
+    background-color:gray;
+    box-shadow:0 2px 4px gray;
+    border-color:gray;
+    outline: none;
+}
+
+.radio-group input[type="radio"]:checked + label {
+  color: darkgray;
+  text-shadow: 1px 1px;
+  transition: 0.5s ease;
+}
+
+button {
+    margin-top:20px;
+    padding:5px 100px;
+    color:black;
+    background-color: aliceblue;
+    border-radius: 10px;
+    border-color:lightblue
+}
+
+button:hover {
+    background-color:lightgray;
+}
+
+button:active {
+    background-color: aliceblue;
+}
