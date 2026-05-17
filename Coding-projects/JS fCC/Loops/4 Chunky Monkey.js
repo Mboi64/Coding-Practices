@@ -9,5 +9,4 @@ function chunkArrayInGroups(arr, num) {
 
 console.log(chunkArrayInGroups([0, 1, 2, 3, 4, 5], 3));
 
-// revisted: past me smart as hell
-// I was able to get the brackets to work as they were suppose to, but the values would not push
+// revisted: I was able to get the brackets to work as they were suppose to, but the values would not push
