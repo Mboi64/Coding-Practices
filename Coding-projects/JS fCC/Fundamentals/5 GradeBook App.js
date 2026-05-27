@@ -25,12 +25,7 @@ const getGrade = (score) => {
 };
 
 // returns if letter grade is passing or not
-const hasPassingGrade = (score) => {
-  if (getGrade(score) !== "F") {
-    return true;
-  }
-  return false;
-};
+const hasPassingGrade = (score) => (getGrade(score) !== "F" ? true : false);
 
 // returns a message of the class average and if the student has pass the course based on their score
 const studentMsg = (arr, score) => {

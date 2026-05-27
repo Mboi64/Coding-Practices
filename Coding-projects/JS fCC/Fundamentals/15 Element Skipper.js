@@ -1,5 +1,6 @@
 // function that accepts an array (arr) and a function (func) as arguments.
 
+// I did not know this was technically a higher-order function :0
 const dropElements = (arr, func) => {
   let result = Array.from(arr.length);
   for (let i = 0; i < arr.length; i++) {
