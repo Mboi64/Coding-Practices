@@ -1,4 +1,4 @@
-// Return number should be LCM for all the numbers from the range given in the array
+//  number should be LCM for all the numbers from the range given in the array
 
 function smallestCommons(arr) {
   const max = Math.max(...arr);
@@ -41,41 +41,42 @@ ORIGINAL SOLUTION
 Main issues: 
   - it takes a long time for numbers or range greater than 10 
   - the program is very cluttered
+
+Least Common Multiple Algorithm for 2 values in an array
+function lowestCommonMultiple(a, b) {
+  const max = Math.max(a, b);
+  const min = Math.min(a, b);
+
+  let factors = [];
+
+  for (let i = 1; i <= max; i++) {
+    factors.push(i);
+  }
+
+  const maxMultiples = factors.map((num) => num * max);
+  const minMultiples = factors.map((num) => num * min);
+  const filteredMaxMultiples = maxMultiples.filter((maxNum) =>
+    minMultiples.some((minNum) => maxNum === minNum),
+  );
+
+  return Math.min(...filteredMaxMultiples);
+}
+
+function smallestCommons(arr){
+  const max = Math.max(...arr);
+  const min = Math.min(...arr);
+  let range = []
+
+  for (let i = min; i <= max; i++) {
+    range.push(i);
+  }
+
+  let currentValue = lowestCommonMultiple(range[0], range[1]);
+  for (let i = 2; i < range.length; i++){
+    currentValue = lowestCommonMultiple(currentValue, range[i])
+  }
+
+  return currentValue
+}
+
 */
-
-// Least Common Multiple Algorithm for 2 values in an array
-// function lowestCommonMultiple(a, b) {
-//   const max = Math.max(a, b);
-//   const min = Math.min(a, b);
-
-//   let factors = [];
-
-//   for (let i = 1; i <= max; i++) {
-//     factors.push(i);
-//   }
-
-//   const maxMultiples = factors.map((num) => num * max);
-//   const minMultiples = factors.map((num) => num * min);
-//   const filteredMaxMultiples = maxMultiples.filter((maxNum) =>
-//     minMultiples.some((minNum) => maxNum === minNum),
-//   );
-
-//   return Math.min(...filteredMaxMultiples);
-// }
-
-// function smallestCommons(arr){
-//   const max = Math.max(...arr);
-//   const min = Math.min(...arr);
-//   let range = []
-
-//   for (let i = min; i <= max; i++) {
-//     range.push(i);
-//   }
-
-//   let currentValue = lowestCommonMultiple(range[0], range[1]);
-//   for (let i = 2; i < range.length; i++){
-//     currentValue = lowestCommonMultiple(currentValue, range[i])
-//   }
-
-//   return currentValue
-// }
