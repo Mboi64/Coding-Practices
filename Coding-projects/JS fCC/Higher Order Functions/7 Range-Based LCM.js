@@ -1,5 +1,16 @@
 //  number should be LCM for all the numbers from the range given in the array
 
+// Borrowed LCM (Lowest Common Multiple) and GCM (Greatest Common Multiple) algorithm
+function gcd(a, b) {
+  while (b !== 0) {
+    [a, b] = [b, a % b];
+  }
+  return a;
+}
+function lcm(a, b) {
+  return (a * b) / gcd(a, b);
+}
+
 function smallestCommons(arr) {
   const max = Math.max(...arr);
   const min = Math.min(...arr);
@@ -21,16 +32,6 @@ console.log(smallestCommons([1, 5]));
 console.log(smallestCommons([2, 10]));
 console.log(smallestCommons([23, 18]));
 
-// Borrowed LCM (Lowest Common Multiple) and GCM (Greatest Common Multiple) algorithm
-function gcd(a, b) {
-  while (b !== 0) {
-    [a, b] = [b, a % b];
-  }
-  return a;
-}
-function lcm(a, b) {
-  return (a * b) / gcd(a, b);
-}
 
 
 
