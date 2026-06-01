@@ -1,14 +1,7 @@
 // If the property with the name equal to the second argument has a truthy value in all the objects of the array, and return true if it has, and false otherwise.
 
 function truthCheck(collection, pre) {
-  const result = collection.every((obj) => {
-    if (obj[pre]) {
-      return true;
-    } else {
-      return false;
-    }
-  });
-  return result;
+  return collection.every((obj) => obj[pre] ? true : false );
 }
 
 console.log(
