@@ -26,12 +26,10 @@ li {
   letter-spacing: 2px;
 }
 
-button,
-.filled {
-  display: inline;
+button {
   position: absolute;
   cursor: pointer;
-  font-size: 15px;
+  font-size: 17px;
   border: none;
   background: none;
   right: 35%;
@@ -43,7 +41,16 @@ button:hover {
   transition: 0.5s;
 }
 
+/* 
+When the user clicks on the icon, this class will be toggled 
+and placed in the button tag and show a red filled heart
+*/
 .filled {
   color: red;
   font-size: 13px;
+  /* 
+  I thought there was a way for me to change the size to be 
+  accurate to the nonfilled heart, but instead it does a cool little
+  animation (fun little accident)
+  */
 }
