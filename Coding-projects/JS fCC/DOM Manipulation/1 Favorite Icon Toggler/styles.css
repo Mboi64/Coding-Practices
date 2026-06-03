@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  text-align: center;
+  margin-top: 10%;
+}
+
+h1 {
+  padding: 25px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  text-align: left;
+  margin: auto 34%;
+  padding: 15px 10px 10px;
+  border-bottom: 1px solid gray;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+button,
+.filled {
+  display: inline;
+  position: absolute;
+  cursor: pointer;
+  font-size: 15px;
+  border: none;
+  background: none;
+  right: 35%;
+  text-align: right;
+}
+
+button:hover {
+  color: red;
+  transition: 0.5s;
+}
+
+.filled {
+  color: red;
+  font-size: 13px;
+}
