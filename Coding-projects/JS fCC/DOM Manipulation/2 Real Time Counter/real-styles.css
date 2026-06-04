@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: rgb(125, 144, 179);
+  display: flex;
+  flex-direction: column; /* specifies the display-direction of flex items */
+  justify-content: center; /* horizontal alignment with the page*/
+  align-items: center; /* vertical alignment with the page*/
+}
+
+h1 {
+  position: relative; /* positioned relative to its normal position of the page*/
+  top: 10rem;
+  padding: 4px;
+  background: rgb(219, 219, 79);
+  font-family: "Open Sans", sans-serif;
+}
+
+textarea {
+  position: relative;
+  top: 11rem;
+  padding: 5px;
+  width: 35%;
+  max-width: 350px;
+  height: 65px;
+  background-color: aliceblue;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px;
+  resize: none;
+}
+
+
+p {
+  position: relative;
+  top: 12rem;
+  font-weight: 600;
+  color: rgb(46, 46, 46);
+  font-family: "Open Sans", sans-serif;
+}
+
+.set-red {
+  color: rgb(190, 10, 10)
+}
