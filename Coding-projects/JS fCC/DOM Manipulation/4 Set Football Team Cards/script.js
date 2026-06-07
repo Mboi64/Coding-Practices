@@ -1,4 +1,5 @@
-// data provided
+// The user should be able to use the dropdown menu and filter between the different players based on their positions
+
 let footballTeam = {
   team: "Argentina",
   year: 1986,
@@ -127,21 +128,30 @@ year.innerText = footballTeam.year;
 
 const playerCards = document.getElementById("player-cards");
 
-for (const player of footballTeam.players) {
+function setPlayerDisplay(players) {
   const newCard = document.createElement("div");
-  if (player.isCaptain) {
-    newCard.setAttribute("class", "player-card");
-    newCard.innerHTML = `<h2>(Captain) ${player.name}</h2>
-    <p>Position: ${player.position}</p>\n`;
-    playerCards.appendChild(newCard);
-  } else {
-    newCard.setAttribute("class", "player-card");
-    newCard.innerHTML = `<h2>${player.name}</h2>
-    <p>Position: ${player.position}</p>\n`;
-    playerCards.appendChild(newCard);
-  }
+  newCard.className = "player-card";
+  newCard.innerHTML = `<h2>${players.isCaptain ? "(Captain) " : ""}${players.name}</h2>
+    <p>Position: ${players.position}</p>\n`;
+  playerCards.appendChild(newCard);
 }
 
-const selectedPosition = document.querySelectorAll(".player-card");
+// Set default to show all players
+footballTeam.players.forEach((player) => {
+  setPlayerDisplay(player);
+});
 
-selectedPosition.forEach((position) => {});
+const playerSelection = document.getElementById("players");
+
+playerSelection.addEventListener("change", (event) => {
+  playerCards.innerHTML = ""; // refresh for new changes to the page
+  let value = event.target.value;
+  footballTeam.players.filter((player) => {
+    if (value === "all") {
+      setPlayerDisplay(player);
+    }
+    if (player.position === value) {
+      setPlayerDisplay(player);
+    }
+  });
+});
