@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Theme Switcher</title>
+    <link rel="stylesheet" href="./stlyes.css" />
+  </head>
+  <body>
+    <p id="status" role="status" aria-live="polite"></p>
+    <button
+      id="theme-switcher-button"
+      aria-haspopup="true"
+      aria-expanded="false"
+      aria-controls="theme-dropdown"
+    >
+      Switch Theme
+    </button>
+    <ul
+      id="theme-dropdown"
+      role="menu"
+      aria-labelledby="theme-switcher-button"
+      hidden
+    >
+      <li role="menuitem" id="theme-light">Light</li>
+      <li role="menuitem" id="theme-gray">Gray</li>
+      <li role="menuitem" id="theme-yellow">Yellow</li>
+      <li role="menuitem" id="theme-pink">Pink</li>
+    </ul>
+    <script src="./script.js"></script>
+  </body>
+</html>

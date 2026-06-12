@@ -1,0 +1,81 @@
+body {
+  margin: 5px;
+  font-family: sans-serif;
+  transition:
+    background 0.3s,
+    color 0.3s;
+}
+
+button {
+  position: absolute;
+  top: 31%;
+  left: 45%;
+  padding: 10px;
+  border: none;
+  background-color: cadetblue;
+  box-shadow: 1px 0 5px;
+  transition: 0.3s ease-out;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(70, 117, 119);
+  transform: scale(1.05);
+  transition: 0.3s ease-out;
+}
+
+ul {
+  position: absolute;
+  top: 34%;
+  left: 45%;
+  margin: 0;
+  width: 6.5rem;
+  padding: 0;
+  box-shadow: 1px 0 5px;
+  color: black;
+  z-index: -1;
+}
+
+li {
+  list-style-type: none;
+  padding: 7px;
+  font-weight: 100;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+li:hover {
+  transform: scale(1.05);
+  transition: 0.2s;
+}
+
+#status {
+  position: absolute;
+  top: 25%;
+  left: 45%;
+  min-height: 20px;
+}
+
+.theme-light {
+  background-color: rgb(221, 221, 221);
+  font-weight: 600;
+  color: rgb(68, 67, 67);
+}
+
+.theme-gray {
+  background-color: gray;
+  font-weight: 600;
+  color: rgb(221, 221, 221);
+}
+
+.theme-yellow {
+  background-color: rgb(223, 223, 104);
+  font-weight: 600;
+  color: rgb(36, 63, 99);
+}
+
+.theme-pink {
+  background-color: rgb(248, 168, 181);
+  font-weight: 600;
+  color: rgb(62, 43, 73);
+}
