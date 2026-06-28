@@ -20,7 +20,6 @@ const myReplace = (sentence, str, replace) => {
 
 // Temporal solution based on original
 const replace = (sentence, str, replace) => {
-  const regex = new RegExp(`\\b${str}\\b`);
   return /^\b[A-Z]/.test(str)
     ? sentence.replace(
         new RegExp(`\\b${str}\\b`),
