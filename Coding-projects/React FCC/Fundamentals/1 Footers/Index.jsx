@@ -1,3 +1,15 @@
+{/* Comments works similarly to JS but with brackets around it */}
+{/* React uses "compnents":
+  Functional - works similarly as JS functions 
+  Class-Based - works similarly as JS Classes
+  */}
+{/* Import and export also works similarly to JS */}
+
+
+
+{/* This is a functional component:
+    - Has to start with an uppercase letter
+  */}
 export const Footer = () => {
   return (
     <footer>
@@ -21,10 +33,5 @@ export const Footer = () => {
   )
 }
 
-{/* Comments works similarly to JS but with brackets around it */}
-{/* React uses "compnents":
-  Functional - works similarly as JS functions 
-  Class-Based - works similarly as JS Classes
-  */}
-{/* Import and export also works similarly to JS */}
-
+{/* containing large blocks of code utilizes parenthesis instead of curly braces*/}
+{/* You can use expressions by using curly braces */}
