@@ -1,0 +1,28 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+footer {
+    background-color: aliceblue;
+    padding: 15px;
+}
+
+.link, p {
+    display: flex;
+    justify-content: center;
+    color: black;
+    list-style-type: none;
+}
+
+.link a {
+    text-decoration: none;
+    color: black;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+.link a:hover{
+    background: rgb(132, 132, 202);
+}
+
