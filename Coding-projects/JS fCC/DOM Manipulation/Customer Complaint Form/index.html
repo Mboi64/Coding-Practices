@@ -61,7 +61,7 @@
             </div>
         </fieldset>
 
-        <fieldset id="complaint-description-container">
+        <fieldset id="complaint-description-container" class="complaint-description">
             <legend>Description of Complaint Reason</legend>
             <textarea placeholder="Describe the reason of your complaint in at least 20 characters"
                 name="complaint-textarea" id="complaint-description"></textarea>
@@ -79,7 +79,7 @@
             <label for="other-solution">Other</label>
         </fieldset>
 
-        <fieldset id="solution-description-container">
+        <fieldset id="solution-description-container" class="solution-description">
             <legend>Description of Desired Solution</legend>
             <textarea placeholder="Describe the desired solution to your issue in at least 20 characters"
                 name="solution-textarea" id="solution-description"></textarea>
@@ -89,10 +89,13 @@
             <span id="message-box" aria-live="polite"></span>
         </div>
 
+        <div class="completion-popup" aria-live="polite">
+            <p id="text"></p>
+        </div>
+        
     </form>
 
     <script src="script.js"></script>
 </body>
 
 </html>
-<!-- given HTML File -->

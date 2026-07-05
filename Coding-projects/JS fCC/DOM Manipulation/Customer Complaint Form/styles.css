@@ -23,7 +23,6 @@ input {
     margin-bottom: 10px;
 }
 
-
 fieldset {
     margin-bottom: 10px;
     border-radius: 5px;
@@ -35,6 +34,14 @@ textarea {
     border-color: rgb(118, 118, 118);
 }
 
+.complaint-description, .solution-description{
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
 #btn-container {
     display: flex;
     justify-content: space-between;
@@ -44,4 +51,30 @@ textarea {
 #submit-btn, #clear-btn {
     margin: 10px 15px 0;
 }
-/* Given CSS File */
+
+.completion-popup {
+    position: fixed;
+    top: 90%;
+    right: calc(50vw - 110px);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: rgb(173, 58, 58);
+    padding: 5px;
+    transform: scale(0.8);
+    opacity: 0; 
+    transition: all 0.3s ease-in-out; 
+}
+
+.completion-popup.completed{
+    background-color: green
+}
+
+.completion-popup.no-show{
+    opacity: 0;
+    transform: scale(0); 
+}
+
+.completion-popup.show{
+    opacity: 1;
+    transform: scale(1); 
+}
