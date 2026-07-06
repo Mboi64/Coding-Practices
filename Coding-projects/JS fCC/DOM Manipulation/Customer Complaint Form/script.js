@@ -130,7 +130,8 @@ form.addEventListener("change", () => {
   isValid(validateForm());
 });
 
-form.addEventListener("submit", () => {
+form.addEventListener("submit", (e) => {
+  e.preventDefault()
   isValid(validateForm());
 });
 
