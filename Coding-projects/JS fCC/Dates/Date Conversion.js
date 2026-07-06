@@ -14,3 +14,5 @@ const formatDateLong = (date) => `Formatted Date (Month Day, Year): ${date.toLoc
 console.log(currentDateFormat)
 console.log(formatDateMMDDYYYY(currentDate))
 console.log(formatDateLong(currentDate))
+
+// There is an updated/more modern version of utlizing and manipulating dates called "Temporal"
