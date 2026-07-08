@@ -71,4 +71,4 @@ export function MoodBoard() {
   );
 }
 
-{/* key is used for React to identify items for effective rendering */}
+{/* key is used for React to identify items for effective rendering specific indexes within array like structures */}
