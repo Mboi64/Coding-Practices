@@ -11,7 +11,7 @@ public class BoundedStack<T> {
     private int size;
 
     // The cast is safe (the array is private and only receives T values)
-    @SuppressWarnings("unchecked");
+    @SuppressWarnings("unchecked")
     public BoundedStack(int capacity) {
         if (capacity < 1) {
             throw new IllegalArgumentException("Curent capacity is less than 1");
