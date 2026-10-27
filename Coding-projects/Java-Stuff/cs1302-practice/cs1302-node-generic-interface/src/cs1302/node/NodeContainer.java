@@ -5,7 +5,7 @@ package cs1302.node;
  * 
  * @param <T> is the parameter for the Node class
  */
-public class Node<T> {
+public class NodeContainer<T> {
     private T item;
     private Node<T> next;
 
@@ -16,7 +16,8 @@ public class Node<T> {
      * @param next represents the following node in the structure
      */
     public Node(T item, Node<T> next) {
-        setData(item, node);
+        setItem(item);
+        setNext(next);
     } // Node
 
     /**
@@ -27,19 +28,7 @@ public class Node<T> {
     public Node(T item) {
         setItem(item);
     } // Node
-
-    /**
-     * Sets up a node, which will be used in the constructor method, to set the specified
-     * item object and next node structure.
-     * 
-     * @param item represents the current item contained in this node
-     * @param node represents the following node in the structure
-     */
-    private void setData(T item, Node<T> next) {
-        this.item = item;
-        this.next = next;
-    } // setData
-
+    
     /**
      * Sets the item in this node.
      * 
@@ -62,7 +51,7 @@ public class Node<T> {
      * @param next represents the following node in this structure
      */
     public void setNext(Node<T> next) {
-        // I wasted soo much time thinking this method mean smth else
+        // I wasted soo much time thinking this method meaning to append 
         this.next = next;
     } // setNext
 

@@ -2,6 +2,9 @@ package cs1302.adt;
 
 public interface Container<T> {
     
+    /**
+     * Adds an item into an adt.
+     */
     void add(T item);
 
     /**
@@ -25,6 +28,6 @@ public interface Container<T> {
 
     // default methods give an implementation inside the interface (implicitly public)
     default boolean isEmpty() {
-        returns this.size() == 0;    
+        return this.size() == 0;    
     }
 }

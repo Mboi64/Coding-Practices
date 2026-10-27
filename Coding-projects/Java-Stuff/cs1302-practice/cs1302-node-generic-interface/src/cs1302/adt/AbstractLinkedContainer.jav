@@ -1,31 +1,51 @@
 package cs1302.adt;
 
-import cs1302.node;
-abstract class AbstractLinkedContainer<T> extends Container{
+import cs1302.node.NodeContainer;
+abstract class AbstractLinkedContainer<T> implements Container<T>{
     
-    private T head;
-    private int size;
+    protected Node<T> head;
+    protected int size;
 
-    public AbstractLinkedContainer(T head) {
-        this.head = new Node<T>(head);
-        this.size = 0;
-    }
+    /**
+     * Constructs the specified adt node by a node head and set the current size to 0.
+     * 
+     * @param head contains the current object node
+     */
+    public AbstractLinkedContainer(Node<T> head) {
+        this.head = head;
+        while (head != null) {
+            this.size++;
+            head = head.getNext();
+        } //while
+    } // AbstractLinkedContainer
 
+    /** {@inheritDoc} */
     @Override
     public int size() {
         return this.size;
-    }
+    } // size
 
-    public peek() {
-        this.ensureNotEmpty();
-        
-    }
-
-    private boolean ensureNotEmpty() {
-        if (this.isEmpty()) {
-            throw new IllegalStateException("The current linked is empty")
+    /** {@inheritDoc} */
+    @Override
+    public T peek() {
+        if(ensureNotEmpty()){
+            throw new IllegalStateException("The node is empty");
         }
-        return true;
-    } 
+        return this.head.getItem();
+    } // peek
 
-}
+    /** {@inheritDoc} */
+    public abstract void add(T item); 
+    // unlike interfaces where the abstract is implicit, you have to type "public abstract" to signify that it is an abstract
+
+    /** {@inheritDoc} */
+    public abstract T remove();
+
+    /**
+     * Returns true if the current node list is not empty.
+     */
+    private boolean ensureNotEmpty() {
+        return this.size != 0;
+    } // ensureNotEmpty
+
+} // AbstractLinkedContainer
