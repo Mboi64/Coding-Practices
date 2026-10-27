@@ -28,7 +28,7 @@ abstract class AbstractLinkedContainer<T> implements Container<T>{
     /** {@inheritDoc} */
     @Override
     public T peek() {
-        if(ensureNotEmpty()){
+        if(checkEmpty()){
             throw new IllegalStateException("The node is empty");
         }
         return this.head.getItem();
@@ -42,10 +42,10 @@ abstract class AbstractLinkedContainer<T> implements Container<T>{
     public abstract T remove();
 
     /**
-     * Returns true if the current node list is not empty.
+     * Returns true if the current node list is empty.
      */
-    private boolean ensureNotEmpty() {
-        return this.size != 0;
+    private boolean checksEmpty() {
+        return this.head == null;
     } // ensureNotEmpty
 
 } // AbstractLinkedContainer
