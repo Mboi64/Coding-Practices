@@ -1,7 +1,7 @@
 package cs1302.adt;
 
-import cs1302.node.NodeContainer;
-abstract class AbstractLinkedContainer<T> implements Container<T>{
+import cs1302.node.Node;
+abstract class AbstractLinkedContainer<T> implements Container<T> {
     
     protected Node<T> head;
     protected int size;
@@ -13,6 +13,7 @@ abstract class AbstractLinkedContainer<T> implements Container<T>{
      */
     public AbstractLinkedContainer(Node<T> head) {
         this.head = head;
+        this.size = 0;
         while (head != null) {
             this.size++;
             head = head.getNext();
@@ -28,7 +29,7 @@ abstract class AbstractLinkedContainer<T> implements Container<T>{
     /** {@inheritDoc} */
     @Override
     public T peek() {
-        if(checkEmpty()){
+        if(this.checksEmpty()){
             throw new IllegalStateException("The node is empty");
         }
         return this.head.getItem();

@@ -5,10 +5,19 @@ package cs1302.node;
  * 
  * @param <T> is the parameter for the Node class
  */
-public class NodeContainer<T> {
+public class Node<T> {
     private T item;
     private Node<T> next;
 
+    /**
+     * Constructs the node with a specified item object.
+     * 
+     * @param item represents the current item contained in this node 
+     */
+    public Node(T item) {
+        setItem(item);
+    } // Node
+    
     /**
      * Constructs the node with a specified item object and next node structure.
      * 
@@ -20,15 +29,6 @@ public class NodeContainer<T> {
         setNext(next);
     } // Node
 
-    /**
-     * Constructs the node with a specified item object.
-     * 
-     * @param item represents the current item contained in this node 
-     */
-    public Node(T item) {
-        setItem(item);
-    } // Node
-    
     /**
      * Sets the item in this node.
      * 
@@ -59,7 +59,7 @@ public class NodeContainer<T> {
      * Returns the following node.
      */
     public Node<T> getNext() {
-        return this.next
+        return this.next;
     } // getNext
 
     /**

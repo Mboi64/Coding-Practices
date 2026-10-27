@@ -1,6 +1,6 @@
 package cs1302.adt;
 
-import cs1302.node.NodeContainer;
+import cs1302.node.Node;
 public class LinkedStack<T> extends AbstractLinkedContainer<T> {
 
     public LinkedStack(Node<T> head){

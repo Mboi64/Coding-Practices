@@ -2,7 +2,7 @@ package cs1302.app;
 
 import java.util.List;
 import cs1302.adt.*;
-import cs1302.node.NodeContainer;
+import cs1302.node.Node;
 
 public class ContainerUtil {
 
@@ -12,10 +12,10 @@ public class ContainerUtil {
         } // for
     } // addAll
 
-    public static <T> transfer(Container<? extends T> src, Container<? super T> dest) {
+    public static <T> void transfer(Container<? extends T> src, Container<? super T> dest) {
         while (!src.isEmpty()) {
             dest.add(src.remove());
         } // while
     } // transfer
-    
+
 }

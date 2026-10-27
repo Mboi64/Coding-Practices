@@ -1,6 +1,6 @@
 package cs1302.adt;
 
-import cs1302.node.NodeContainer;
+import cs1302.node.Node;
 public class LinkedQueue<T> extends AbstractLinkedContainer<T> {
 
     private Node<T> tail;
